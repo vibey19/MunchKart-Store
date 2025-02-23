@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { FileHeart, GitCommitVertical, Plus, Salad, Truck } from "lucide-react";
+import { FileHeart, Salad, Truck } from "lucide-react";
 import Container from "@/components/container";
 
 const About = () => {
@@ -65,12 +64,6 @@ const About = () => {
             </CardDescription>
           </Card>
         </div>
-      </section>
-
-      <section className="my-4 py-8 flex flex-col items-center justify-center">
-        <h2 className="text-5xl font-bold tracking-wider uppercase text-neutral-700">
-          FAQs
-        </h2>
       </section>
     </Container>
   );
