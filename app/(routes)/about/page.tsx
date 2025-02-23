@@ -1,64 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
 import { FileHeart, GitCommitVertical, Plus, Salad, Truck } from "lucide-react";
 import Container from "@/components/container";
-
-const faqItems = [
-  {
-    id: "faq1",
-    title: "How does MunchKart work?",
-    content:
-      "MunchKart is an online food ordering and delivery platform that connects you with a variety of restaurants in your area. Simply browse through the menu of your favorite eateries, customize your order, and proceed to checkout. Once your order is placed, the restaurant prepares your food, and a delivery partner picks it up and brings it straight to your doorstep. You can track your order in real time from the app to know exactly when it will arrive.",
-  },
-  {
-    id: "faq2",
-    title: "What are the delivery charges?",
-    content:
-      "Delivery charges depend on several factors, including your location, the restaurant’s policies, and ongoing promotions. Some restaurants offer free delivery, while others may have a fixed or distance-based charge. You can always check the final delivery cost before confirming your order at checkout.",
-  },
-  {
-    id: "faq3",
-    title: "Can I track my order?",
-    content:
-      "Absolutely! Once you place your order, you can track its progress in real time through the MunchKart app. You'll receive updates when the restaurant starts preparing your food, when the delivery partner picks it up, and when it's en route to your location. This ensures you stay informed and can anticipate when your meal will arrive.",
-  },
-  {
-    id: "faq4",
-    title: "What payment methods do you accept?",
-    content:
-      "MunchKart supports multiple payment options to make your experience seamless. We accept credit and debit cards, digital wallets (such as Google Pay, Apple Pay, and PayPal), and cash on delivery, depending on the restaurant’s availability. Some restaurants may also offer net banking or other regional payment methods.",
-  },
-  {
-    id: "faq5",
-    title: "Can I cancel or modify my order after placing it?",
-    content:
-      "Order modifications and cancellations depend on the restaurant's policies and the order status. If your order has not yet been prepared, you may be able to cancel or make changes through the app. However, once the restaurant starts preparing your food, cancellations or modifications might not be possible. In case of an urgent issue, you can contact customer support for assistance.",
-  },
-  {
-    id: "faq6",
-    title: "How long does delivery take?",
-    content:
-      "Delivery times vary based on factors such as restaurant preparation time, distance, traffic conditions, and order volume. On average, orders are delivered within 30-60 minutes. The estimated delivery time for your specific order will be displayed at checkout and updated in real time as your food is prepared and dispatched.",
-  },
-  {
-    id: "faq7",
-    title: "What should I do if my order is incorrect or missing items?",
-    content:
-      "If you receive an incorrect order or notice that some items are missing, please report the issue through the MunchKart app immediately. You can also contact our customer support team, who will coordinate with the restaurant and delivery partner to resolve the issue. We strive to ensure 100% customer satisfaction and will work with you to find the best solution, whether it's a refund, replacement, or credit for future orders.",
-  },
-  {
-    id: "faq8",
-    title: "Are there any discounts or promotions available?",
-    content:
-      "Yes! MunchKart regularly offers discounts, promo codes, and special deals from partnered restaurants. You can check the 'Offers' section in the app or website to find ongoing promotions. Additionally, first-time users, loyal customers, or those who refer friends may receive exclusive discount coupons.",
-  },
-];
 
 const About = () => {
   return (
@@ -129,25 +72,6 @@ const About = () => {
           FAQs
         </h2>
       </section>
-
-      <div className="w-full max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="w-full">
-          {faqItems.map((item) => (
-            <AccordionItem
-              value={item.id}
-              key={item.id}
-              className="  py-2 bg-white rounded-lg shadow-md overflow-hidden mb-2"
-            >
-              <AccordionTrigger className="flex w-full justify-between items-center py-4 px-5 text-lg font-semibold text-gray-800 ">
-                <span className="flex items-center gap-3">{item.title}</span>
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 px-6 pb-3 text-base leading-relaxed border-l-4 border-hero">
-                {item.content}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
     </Container>
   );
 };
